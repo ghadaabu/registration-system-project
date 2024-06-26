@@ -30,13 +30,13 @@ int main()
 
 					if (!status)
 					{
-						cout << "False Login!" << endl;
+						// cout << "False Login!" << endl;
 						// system("PAUSE");
 						// return 0;
 					}
 					else 
 					{
-						cout << "Successfully logged in!" << endl;
+						// cout << "Successfully logged in!" << endl;
 						system("PAUSE");
 						return 1;
 					}
