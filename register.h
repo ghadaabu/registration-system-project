@@ -1,6 +1,7 @@
 #ifndef Register_header
 #define Register_header
 
+#include "user_mod.h"
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -28,7 +29,7 @@ class Register {
 
 
 	public:
-		int userLogin();
+		int userLogin(UserC& user);
 		// function that checks if a user exists and the provided password is correct. 
 		// Returns 0 if successful, 1 if username does not exist, and 2 if the password is incorrect.
 		

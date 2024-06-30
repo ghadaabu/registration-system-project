@@ -1,5 +1,4 @@
 #include "register.h"
-#include "user_mod.h"
 
 using namespace std;
 
@@ -13,7 +12,7 @@ bool Register::usernameExists(const string& username)
 	return true;
 }
 
-int Register::userLogin()
+int Register::userLogin(UserC& user)
 	// function that checks if a user exists and the provided password is correct. 
 	// Returns 0 if successful, 1 if username does not exist, and 2 if the password is incorrect.
 {
@@ -29,8 +28,10 @@ int Register::userLogin()
 
 	string hashedPassword = Register::hashPassword(password);
 	if (hashedPassword == userData[username]) {
+		user.setUsername(username);
 		return 0;
-	} else {
+	} 
+	else {
 		return 2;
 	}
 }
