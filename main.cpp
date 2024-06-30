@@ -9,6 +9,7 @@ int main()
 {
 	int choice;
 	Register regSystem; 
+	UserC user;
 
 	cout << "Select an option:\n1: Register\n2: Login\nYour choice: ";
 	while(cin >> choice){
@@ -30,22 +31,22 @@ int main()
 			case 2:
 				{ 
 					//define user object !!
-					int status = regSystem.userLogin();
+					int status = regSystem.userLogin(user);
 
 					switch (status) { 
-						case 0: 
+						case 0: // successful login
 							{
 								// cout << "Successfully logged in!" << endl;
 								system("PAUSE");
 								return 1;
 							}
-						case 1:
+						case 1: // user doesn't exist
 							{
 								cout << "User doesn't exist!" << endl;
 								// system("PAUSE");
 								// return 0;
 							}
-						case 2:
+						case 2: // wrong password
 							{
 								cout << "Wrong password" << endl;
 							}
