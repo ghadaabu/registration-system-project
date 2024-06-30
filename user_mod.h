@@ -13,6 +13,8 @@ class UserC {
 		UserC(const std::string& uname) : username(uname) {}
 		// initilze the user object with uname
 
+		void setUsername(const std::string uname) { username = uname; }
+
 		std::string getUsername() const { return username; }
 
 };
