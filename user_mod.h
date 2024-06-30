@@ -8,6 +8,8 @@ class UserC {
 		std::string username;
 
 	public:
+		UserC() : username("") {}
+
 		UserC(const std::string& uname) : username(uname) {}
 		// initilze the user object with uname
 
