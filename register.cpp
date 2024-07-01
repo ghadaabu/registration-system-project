@@ -28,7 +28,7 @@ int Register::userLogin(UserC& user)
 
 	string hashedPassword = Register::hashPassword(password);
 	if (hashedPassword == userData[username]) {
-		user.setUsername(username);
+		user.login(username);
 		return 0;
 	} 
 	else {

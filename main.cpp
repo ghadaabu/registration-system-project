@@ -13,7 +13,6 @@ int main()
 
 	cout << "Select an option:\n1: Register\n2: Login\nYour choice: ";
 	while(cin >> choice){
-
 		switch (choice) {
 			case 1:
 				{
@@ -44,7 +43,6 @@ int main()
 							{
 								cout << "User doesn't exist!" << endl;
 								// system("PAUSE");
-								// return 0;
 							}
 						case 2: // wrong password
 							{
