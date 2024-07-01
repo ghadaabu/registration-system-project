@@ -8,11 +8,11 @@ const std::string DEFAULT_USER = "";
 class UserC {
 	private:
 		std::string username;
-
-	public:
 		bool status = false;
 		// flag that indicates whether the user is loged in; true if yes, false elsewise
 
+
+	public:
 		UserC() : username(DEFAULT_USER) {}
 		// default user initilization
 
@@ -30,6 +30,8 @@ class UserC {
 			username =  DEFAULT_USER;
 			status = false;
 		}
+
+		bool isLoggedIn() { return status; }
 
 };
 
